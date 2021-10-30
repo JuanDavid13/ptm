@@ -7,18 +7,18 @@ PTM is a desktop based task manager.
 --------
 
 ## Todos
-[ ] Database connection
-[ ] UI / UX
-[ ] Settings
-[ ] Shortcuts
-[ ] Notifications
-[ ] Reminders
-[ ] Areas
-[ ] Todos
-[ ] Calendar
-[ ] Daily planner
-[ ] Goals
-[ ] Nestted Goals
-[ ] Progress
-[ ] Money manager
-[ ] Events
+- [ ] Database connection
+- [ ] UI / UX
+- [ ] Settings
+- [ ] Shortcuts
+- [ ] Notifications
+- [ ] Reminders
+- [ ] Areas
+- [ ] Todos
+- [ ] Calendar
+- [ ] Daily planner
+- [ ] Goals
+- [ ] Nestted Goals
+- [ ] Progress
+- [ ] Money manager
+- [ ] Events
