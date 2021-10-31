@@ -15,8 +15,22 @@ body {
 }
 
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 20vw;
-  border-right: 1px solig #333;
+  height: 100vh;
+  border-right: 1px solid #333;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+nav #logo_svg {
+  width: 7vw;
+  height: fit-content;
+  margin-bottom: 2rem;
 }
 
 #content {

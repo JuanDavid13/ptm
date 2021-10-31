@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">-->
-    <link href="./styles.css" rel="stylesheet">
-    <title>Tango</title>
-  </head>
-  <body>
-    <nav id="nav">
-<svg id="logo_svg" xmlns="http://www.w3.org/2000/svg"
-     width="10vw" height="auto"
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+              "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="2.10667in" height="0.78in"
      viewBox="0 0 632 234">
-  <path id="logo"
-        fill="#AAA" stroke-width="0"
+  <path id="Selection #1"
+        fill="none" stroke="black" stroke-width="1"
         d="M 596.00,130.28
            C 587.59,132.83 581.85,136.86 578.18,145.00
              570.90,161.19 582.04,180.18 600.00,180.96
@@ -131,17 +124,3 @@
              490.76,217.18 481.94,215.23 476.35,208.97
              465.70,197.06 475.82,178.36 481.09,169.64 Z" />
 </svg>
-      <button id="button">click</button>
-    </nav>
-    <div id="content">
-      <div id="tasks">
-        <span>no tasks yet.</span> 
-      </div>
-
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    </div>
-
-    <script src="./renderer.js"></script>
-  </body>
-</html>
