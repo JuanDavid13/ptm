@@ -22,3 +22,6 @@ PTM is a desktop based task manager.
 - [ ] Progress
 - [ ] Money manager
 - [ ] Events
+- [ ] Habits
+- [ ] Metrics
+- [ ] History

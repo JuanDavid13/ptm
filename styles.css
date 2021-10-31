@@ -4,35 +4,26 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
+  font-family: Sans-serif;
   background-color: #111;
   color: #AAA;
-  font-family: sans-serif;
 }
 
 nav {
-  position: fixed;
   width: 20vw;
-  height: 100vh;
-  border-right: 1px solid #333;
+  border-right: 1px solig #333;
 }
 
 #content {
   margin-left: 20vw;
 }
-#content .task {
-  margin: 1rem;
-  padding: 1rem;
-  background-color: #222;
-  border: 1px solid #333;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
-}
-#content .task.done {
-  border-top: 2px solid royalblue;
-}
-#content .task b {
-  text-transform: uppercase;
+#content #tasks {
+  overflow: auto;
 }
 
 /*# sourceMappingURL=styles.css.map */
