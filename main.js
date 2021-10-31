@@ -66,6 +66,10 @@ app.whenReady().then(() => {
     mainWindow.webContents.send('received','ha llegado!');
   });
 
+  ipcMain.on('get_tasks', (e,msg) =>{
+    mainWindow.webContents.send('list_tasks', data.todos );
+  });
+
 
 })
 

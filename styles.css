@@ -29,8 +29,16 @@ nav {
 }
 nav #logo_svg {
   width: 7vw;
+  min-width: 85px;
   height: fit-content;
   margin-bottom: 2rem;
+}
+nav .nav_btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  color: #AAA;
+  cursor: pointer;
 }
 
 #content {
