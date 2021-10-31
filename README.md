@@ -7,7 +7,7 @@ PTM is a desktop based task manager.
 --------
 
 ## Todos
-- [ ] Database connection
+- [x] Database connection
 - [ ] UI / UX
 - [ ] Settings
 - [ ] Shortcuts

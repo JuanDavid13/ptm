@@ -70,6 +70,36 @@ app.whenReady().then(() => {
     mainWindow.webContents.send('list_tasks', data.todos );
   });
 
+  const mongo_cli = require('mongodb').MongoClient;
+  const url = 'mongodb://localhost:27017';
+  const db_name = 'smog';
+
+  const client = new mongo_cli(url);
+
+  async function run() {
+    try {
+      await client.connect();
+      const database = client.db(db_name);
+      const areas = database.collection('areas');
+
+      //const query = { name: 'prueba' };
+      //const area = await areas.findOne(query);
+      
+      const result = await areas.find().toArray();
+
+      for(let i = 0;  i < result.length; i++){
+        //let area = JSON.parse(result[i]);
+        //console.log(area.name);
+        console.log(result[i])
+      }
+
+    } finally {
+      // Ensures that the client will close when you finish/error
+      await client.close();
+    }
+  }
+  run().catch(console.dir);
+
 
 })
 

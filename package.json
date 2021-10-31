@@ -11,5 +11,8 @@
   "devDependencies": {
     "electron": "^15.3.0",
     "node-sass": "^6.0.1"
+  },
+  "dependencies": {
+    "mongodb": "^4.1.3"
   }
 }
