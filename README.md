@@ -4,8 +4,6 @@ PTM is a desktop based task manager.
 
 #### :exclamation: This project is in a very early stage. Stay tuned.
 
---------
-
 ## Todos
 - [x] Database connection
 - [ ] UI / UX

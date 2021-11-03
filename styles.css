@@ -47,5 +47,10 @@ nav .nav_btn {
 #content #tasks {
   overflow: auto;
 }
+#content #exp_form_cont {
+  width: 90%;
+  height: 5vh;
+  margin: 0 auto;
+}
 
 /*# sourceMappingURL=styles.css.map */

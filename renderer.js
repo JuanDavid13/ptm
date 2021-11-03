@@ -1,31 +1,12 @@
-const render = window.api;
-render.receive();
+import { render } from './js/render.js';
 
-$('#button').click(()=>{
-  render.send('print','envaindo ...');
-});
+const api = window.api;
+
+api.receive();
 
 let butons = $('.nav_btn');
 $(butons).click((e)=>{
-  // move to another file
-  renderCtn($(e.target).val());
+  render($(e.target).val());
+  //render.send('get_tasks');
 });
-
-//move to another file
-function renderHome(){
-  $('#content').html('');
-}
-
-function renderTasks(){
-  render.send('get_tasks');
-}
-
-function renderCtn(ctn){
-  if(ctn == 'home')
-    renderHome();
-
-  if(ctn == 'tasks')
-    renderTasks();
-
-}
 
