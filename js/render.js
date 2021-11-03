@@ -1,6 +1,6 @@
 const api = window.api;
 
-export function render(view){
+export async function render(view){
   if(view == 'money')
     renderMoney();
 }
@@ -9,8 +9,11 @@ function renderMoney(){
   let cont = $('#content');
   $(cont).html(''); // empty the content;
 
+  api.list_money((data)=>{
+    let money = JSON.parse(data);
+  });
 
-  api.send('get_money','');
+  api.send('get_money');
 
   // creating component;
   let expence_form = document.createElement('DIV');
@@ -21,12 +24,13 @@ function renderMoney(){
   let date = raw_date.getFullYear() + '-' + String(raw_date.getMonth()+1).padStart(2,'0') + '-' + String(raw_date.getDate()).padStart(2,'0');
   let exp_form_html = 
     '<form id="exp_form" method="POST">' +
-      '<input id="quant" name="quant" type="number" min="1.0" max="10000" placeholder="Quantity" step="0.05" autocomeplet="off"required>'+
+      '<input id="concept" name="concept" type="text" placeholder="Reason" spellcheck="false" autocomeplet="off" required>'+
+      '<input id="quant" name="quant" type="number" min="1.0" max="10000" placeholder="Quantity" step="0.05" autocomeplet="off" required>'+
       '<input id="date" name="date" type="date" value="' + date + '">'+
-      '<div class="income">'+
-        '<label>'+
+      '<div id="income">'+
+        '<label class="checked">'+
           '<input type="radio" name="income" value="expence" checked>'+
-        '😡</lable>'+
+        '😡</label>'+
         '<label>'+
           '<input type="radio" name="income" value="income">'+
         '🤑</label>'+
@@ -39,14 +43,21 @@ function renderMoney(){
   // append component
   $(cont).append(expence_form);
 
+  $('#income input').click((e)=>{
+    $('#income label').removeClass('checked');
+    $(e.currentTarget).parent().addClass('checked');
+  });
+
   // no validation made yet
   $('#exp_form_sub').click((e)=>{
     e.preventDefault();
     let form = new FormData($('#exp_form')[0]);
 
+    let concept = form.get('concept');
     let quant = form.get('quant');
     let date = parseDate(form.get('date'));
     let option = form.get('income');
+
 
   })
 

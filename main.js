@@ -1,7 +1,9 @@
 import { app, Menu, BrowserWindow, ipcMain } from 'electron';
 //import { path } from 'path';
 const path = require ('path');
-import { database } from './js/database.js';
+
+//import { database } from './js/database.js';
+import { money } from './js/money';
 
 let mainWindow = null;
 
@@ -46,10 +48,9 @@ app.whenReady().then(() => {
   });
   */
 
-  ipcMain.on('get_money', async (e,msg) => {
-    const db = await database.get_db();
-    let results = await db.collection('areas').find().toArray();
-    console.log(results);
+  ipcMain.on('get_money', async (e) => {
+    console.log(await money.get_money());
+    mainWindow.webContents.send('list_money', await money.get_money());
   });
 
 })

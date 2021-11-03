@@ -32,6 +32,7 @@ async function run() {
 run().catch(console.dir);
 */
 
+// todo: only one instance
 const database = {
   get_db: async () => {
     try {
@@ -41,6 +42,9 @@ const database = {
       //await client.close();
     }
     return null;
+  },
+  close: () => {
+    client.close();
   }
 }
 

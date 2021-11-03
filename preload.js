@@ -1,8 +1,16 @@
 const { contextBridge, ipcRenderer } = require('electron');
 
+//const cont = document.querySelector('#content');
+//const event = new CustomEvent('prueba');
+//cont.dispatchEvent(event);
+
+contextBridge.exposeInMainWorld('data',{
+  data: {}
+})
+
 contextBridge.exposeInMainWorld('api',{
-  send:(chnl, msg) => {
-    ipcRenderer.send(chnl, msg);
+  send:(chnl) => {
+    ipcRenderer.send(chnl);
   },
   receive: () => {
 
@@ -32,5 +40,8 @@ contextBridge.exposeInMainWorld('api',{
       }
 
     });
+  },
+  list_money: (func)=>{
+    ipcRenderer.on('list_money', (e,data) => func(data));
   }
 });
