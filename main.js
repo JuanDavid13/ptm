@@ -49,7 +49,6 @@ app.whenReady().then(() => {
   */
 
   ipcMain.on('get_money', async (e) => {
-    console.log(await money.get_money());
     mainWindow.webContents.send('list_money', await money.get_money());
   });
 

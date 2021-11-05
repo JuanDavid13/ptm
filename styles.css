@@ -1,3 +1,85 @@
+#exp_form_cont {
+  width: 95%;
+  height: auto;
+  margin: 1rem auto 0 auto;
+  padding: 1rem;
+  border: 1px solid #333;
+  border-radius: 3px;
+}
+#exp_form_cont form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+#exp_form_cont form input[type=number],
+#exp_form_cont form input[type=text],
+#exp_form_cont form input[type=date] {
+  border: 1px solid #333;
+  border-radius: 3px;
+  color: #AAA;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  font-size: 1rem;
+}
+#exp_form_cont form input[type=number] #placeholder,
+#exp_form_cont form input[type=text] #placeholder,
+#exp_form_cont form input[type=date] #placeholder {
+  color: #AAA;
+}
+#exp_form_cont form input[type=number]:focus-visible,
+#exp_form_cont form input[type=text]:focus-visible,
+#exp_form_cont form input[type=date]:focus-visible {
+  outline: royalblue solid 2px;
+}
+#exp_form_cont form input::-webkit-inner-spin-button {
+  display: none;
+}
+#exp_form_cont form input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+#exp_form_cont form #income {
+  min-width: 100px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+  border: 1px solid #333;
+  border-radius: 3px;
+}
+#exp_form_cont form #income label {
+  width: 100%;
+  height: 39px;
+  display: grid;
+  place-content: center;
+  font-size: 1.3rem;
+  transition: all 0.25s ease;
+}
+#exp_form_cont form #income label:hover {
+  background-color: #333;
+}
+#exp_form_cont form #income label.checked {
+  background-color: #333;
+}
+#exp_form_cont form #income label input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  cursor: pointer;
+}
+#exp_form_cont form button {
+  border: none;
+  border-radius: 3px;
+  color: #CCC;
+  background-color: royalblue;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
 *, *::after, *::before {
   margin: 0;
   padding: 0;
@@ -46,87 +128,6 @@ nav .nav_btn {
 }
 #content #tasks {
   overflow: auto;
-}
-#content #exp_form_cont {
-  width: 95%;
-  height: auto;
-  margin: 1rem auto 0 auto;
-  padding: 1rem;
-  border: 1px solid #333;
-  border-radius: 8px;
-}
-#content #exp_form_cont form {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-#content #exp_form_cont form input[type=number],
-#content #exp_form_cont form input[type=text],
-#content #exp_form_cont form input[type=date] {
-  border: 1px solid #333;
-  border-radius: 3px;
-  color: #AAA;
-  background-color: transparent;
-  padding: 0.5rem 1rem;
-  width: 100%;
-  font-size: 1rem;
-}
-#content #exp_form_cont form input[type=number] #placeholder,
-#content #exp_form_cont form input[type=text] #placeholder,
-#content #exp_form_cont form input[type=date] #placeholder {
-  color: #AAA;
-}
-#content #exp_form_cont form input[type=number]:focus-visible,
-#content #exp_form_cont form input[type=text]:focus-visible,
-#content #exp_form_cont form input[type=date]:focus-visible {
-  outline: royalblue solid 2px;
-}
-#content #exp_form_cont form input::-webkit-inner-spin-button {
-  display: none;
-}
-#content #exp_form_cont form input::-webkit-calendar-picker-indicator {
-  display: none;
-}
-#content #exp_form_cont form #income {
-  min-width: 100px;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-around;
-  overflow: hidden;
-  border: 1px solid #333;
-  border-radius: 3px;
-}
-#content #exp_form_cont form #income label {
-  width: 100%;
-  height: 39px;
-  display: grid;
-  place-content: center;
-  font-size: 1.3rem;
-  transition: all 0.25s ease;
-}
-#content #exp_form_cont form #income label:hover {
-  background-color: #333;
-}
-#content #exp_form_cont form #income label.checked {
-  background-color: #333;
-}
-#content #exp_form_cont form #income label input {
-  position: absolute;
-  opacity: 0;
-  height: 0;
-  width: 0;
-  cursor: pointer;
-}
-#content #exp_form_cont form button {
-  border: none;
-  border-radius: 3px;
-  color: #CCC;
-  background-color: royalblue;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

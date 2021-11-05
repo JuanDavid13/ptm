@@ -1,13 +1,5 @@
 const { contextBridge, ipcRenderer } = require('electron');
 
-//const cont = document.querySelector('#content');
-//const event = new CustomEvent('prueba');
-//cont.dispatchEvent(event);
-
-contextBridge.exposeInMainWorld('data',{
-  data: {}
-})
-
 contextBridge.exposeInMainWorld('api',{
   send:(chnl) => {
     ipcRenderer.send(chnl);
