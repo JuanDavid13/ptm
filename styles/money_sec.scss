@@ -83,3 +83,54 @@
 
 	}
 }
+
+.item_list{
+	width:80%;
+	margin:1rem auto 0 auto;
+	border:1px solid v.$hl;
+	border-radius: v.$rad;
+	padding:.5rem 1rem;
+	background-color:v.$bg;
+
+	display:grid;
+	grid-template-columns: 50px 2fr repeat(2,1fr);
+	grid-template-rows:1rem;
+
+	position:relative;
+
+	&:after{
+			content:'X';
+			position:absolute;
+			top:50%;
+			right:30px;
+			transform:translateY(-50%);
+			width:30px;
+			height:30px;
+			border-radius:50%;
+			display:grid;
+			place-content:center;
+			transition:all .25s ease;
+			z-index:-1;
+			background-color:v.$bg;
+	}
+
+	&::after{
+		&:hover{
+			background-color:red;
+		}
+	}
+
+	&:hover{
+		&::after{
+			right: -50px;
+			box-shadow:0 3px 10px rgba(0,0,0,.6);
+		}
+	}
+	
+	.coment{
+		color:#555;
+	}
+}
+
+
+

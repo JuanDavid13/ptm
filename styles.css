@@ -80,6 +80,44 @@
   font-size: 1rem;
 }
 
+.item_list {
+  width: 80%;
+  margin: 1rem auto 0 auto;
+  border: 1px solid #333;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  background-color: #111;
+  display: grid;
+  grid-template-columns: 50px 2fr repeat(2, 1fr);
+  grid-template-rows: 1rem;
+  position: relative;
+}
+.item_list:after {
+  content: "X";
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  transition: all 0.25s ease;
+  z-index: -1;
+  background-color: #111;
+}
+.item_list::after:hover {
+  background-color: red;
+}
+.item_list:hover::after {
+  right: -50px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+}
+.item_list .coment {
+  color: #555;
+}
+
 *, *::after, *::before {
   margin: 0;
   padding: 0;
